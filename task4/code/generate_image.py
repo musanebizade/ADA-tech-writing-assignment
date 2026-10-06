@@ -1,7 +1,3 @@
-"""Generate an asymmetric test image of any size (so flips and crops are easy to see).
-
-Usage: python generate_image.py WIDTH HEIGHT OUTPUT.png
-"""
 import argparse
 
 import numpy as np
