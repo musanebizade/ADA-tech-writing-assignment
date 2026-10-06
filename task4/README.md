@@ -97,9 +97,9 @@ Besides the generated test image, both programs were run on a real image, a 2500
 | subsample | `::5` | `::5` | 500×500 | identical |
 | vertical flip | `::-1` | `::1` | 2500×2500 | identical |
 
-![crop](output/screen_comparison.png)
-![subsample](output/small_comparison.png)
-![flip](output/upside_comparison.png)
+![crop](code/output/screen_comparison.png)
+![subsample](code/output/small_comparison.png)
+![flip](code/output/upside_comparison.png)
 
 **Transparency.** The first attempt, `--rows=100:400 --cols=50:300`, selected only the top-left corner of the image, which is plain background. Both programs returned the same 300×250 patch, but the standalone output files looked white in the image viewer. Checking the pixels showed that every pixel was (71, 112, 76) with alpha 0: the source PNG has a transparent background, and slicing preserves the alpha channel. The comparison figure ignores alpha, so it shows the green colour underneath. The outputs were correct. The lesson is that the slice must be chosen to cover the object of interest, and that the programs handle all four RGBA channels, not only colour.
 
