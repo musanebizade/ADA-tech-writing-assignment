@@ -134,6 +134,5 @@ Speed-ups from the table:
 - **Java time grows faster than N³ at larger sizes.** From N = 400 to 800 the work grows 8× but the time grows about 11×, because the matrices stop fitting in cache. Loop blocking would help, but it is outside the scope of this task.
 - **Caveats.** Small-size timings (N = 50) are dominated by JIT warm-up and timer resolution and are noisy. The comparison is not "Java vs Python" in general: NumPy is fast because its core is compiled, multithreaded library code, not because of Python itself.
 
-## 9. ChatGPT implementation
 
-*To be added.*
+
